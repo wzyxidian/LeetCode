@@ -28,8 +28,8 @@ public class TreeTraverse {
 		bh.preOrderTraverse2(nodeList.get(0));
 		System.out.println("中序遍历结果：");
 		bh.inOrderTraverse2(nodeList.get(0));
-//		System.out.println("后序遍历结果:");
-//		bh.postOrderTraverse(nodeList.get(0));
+		System.out.println("后序遍历结果:");
+		bh.postOrderTraverse(nodeList.get(0));
 		
 	}
 	
@@ -133,9 +133,24 @@ public class TreeTraverse {
 	//这里用了两个栈，一个用来标记，一个用来存节点
 	public static void postOrderTraverse2(TreeNode node){
 		Stack<TreeNode> stack = new Stack<TreeNode>();
+		Stack<Integer> stack1 = new Stack<Integer>();
+		
 		while(node != null || !stack.empty()){
 			while(node != null){
+				stack.push(node);
+				stack1.push(0);
+				node = node.leftChild;
+			}
+			while(!stack.empty() && stack1.peek() == 1){
+				stack1.pop();
+				System.out.println(stack.pop().val);
 				
+			}
+			if(!stack.empty()){
+				stack1.pop();
+				stack1.push(1);
+				node = stack.peek();
+				node = node.rightChild;
 			}
 		}
 	}
