@@ -38,6 +38,7 @@ public class LowestCommonAncestor {
 	  * 
 	  * 本题目是求两个子节点的最小公共父节点，采用中序遍历的方式，因为是二叉排序树，所以无形中给了一个已知的条件
 	  * 左子树小于父节点，小于右子树
+	  * 如果如果p,q 比root小, 则LCA必定在左子树, 如果p,q比root大, 则LCA必定在右子树. 如果一大一小, 则root即为LCA.
 	  */
 	 public TreeNode lowestCommonAncestor(TreeNode root,TreeNode p,TreeNode q){
 		 TreeNode lowestCommonAncestor = root;
