@@ -14,7 +14,7 @@ import java.util.HashMap;
 public class StringToInteger {
 
 	
-	//错误的解法，自己没有想明白这个问题，以为任意的字符都可以转换成整型，想的太天真，其实这个问题，自己看Java源码的时候看过
+	//错误的解法，自己没有想明白这个问题，以为任意的字符都可以转换成整型，想的太天真，其实这个问题，自己看Java源码的时候看过Integer.parseInt(String str)
 	public static int myAtoi(String str){
 		StringBuffer sb = new StringBuffer();
 		if(str == null){
@@ -56,7 +56,7 @@ public class StringToInteger {
 	}
 	
 	//正确的解法
-	//这个问题要注意几个方面（1）输入是“”这种字符串的时候，返回0
+	//这个问题要注意几个方面（1）输入是“”,null这种字符串的时候，返回0
 	//（2）判断转换的值是否大于Integer的最大值，是否小于Integer的最小值，及超过int的范围，返回int最大值或最小值
 	//(3)里面会有“+”“-”的影响
 	//学到了一个API方法Character.isWhitespace()判断是否为“”
@@ -65,6 +65,8 @@ public class StringToInteger {
 		int ret = 0;
 		int digit = 0;
 		int len =  str.length();
+		if(str ==null || len == 0)
+			return 0;
 		while(p < len && Character.isWhitespace(str.charAt(p)))
 			p++;
 		if(p == len)
