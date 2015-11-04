@@ -65,7 +65,7 @@ public class StringToInteger {
 		int ret = 0;
 		int digit = 0;
 		int len =  str.length();
-		if(str ==null || len == 0)
+		if(str == null || len == 0)
 			return 0;
 		while(p < len && Character.isWhitespace(str.charAt(p)))
 			p++;
