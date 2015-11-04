@@ -1,4 +1,4 @@
-package cn.edu.xidian.sselab;
+package cn.edu.xidian.sselab.array;
 
 /**
  * title:Plus One
