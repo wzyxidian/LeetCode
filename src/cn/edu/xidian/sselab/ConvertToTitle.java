@@ -57,7 +57,6 @@ public class ConvertToTitle {
 				n--;
 			}
 		}
-		return sb.reverse().toString();
-		
+		return sb.reverse().toString();		
 	}
 }

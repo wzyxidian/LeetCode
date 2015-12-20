@@ -25,11 +25,9 @@ public class AddBinary {
 		int sum = 0;
 		int len1 = a.length();
 		int len2 = b.length();
-		int len = Math.max(len1, len2) + 1;
 		StringBuffer sb = new StringBuffer();
 		int i = len1 -1;
 		int j = len2 - 1;
-		int k = len - 1;
 		while(i >= 0 || j >= 0){
 			sum /= 2;
 			if(i >= 0){
@@ -41,7 +39,6 @@ public class AddBinary {
 				j--;
 			}
 			sb.append(sum % 2);
-			k--;
 		}
 		if(sum / 2 == 1){
 			sb.append(1);
