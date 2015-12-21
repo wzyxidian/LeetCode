@@ -1,4 +1,4 @@
-package cn.edu.xidian.sselab;
+package cn.edu.xidian.sselab.array;
 
 import java.util.HashSet;
 /**
