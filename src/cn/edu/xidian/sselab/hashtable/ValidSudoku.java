@@ -39,9 +39,9 @@ public class ValidSudoku {
 	//将比较的过程提炼了出来
 	//这里有个index.add，如果存在返回false，不存在返回true
 	public boolean isValidSudokus(char[][] board, int x1, int y1, int x2, int y2){		
+		Set index = new HashSet();
 		for(int i=x1;i<=x2;i++){
 			for (int j=y1;j<=y2;j++){
-				Set index = new HashSet();
 				if(board[i][j] != '.'){
 					if(!index.add(board[i][j]))
 						return false;
