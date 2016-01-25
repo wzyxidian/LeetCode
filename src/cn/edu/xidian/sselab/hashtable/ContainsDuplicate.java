@@ -1,4 +1,4 @@
-package cn.edu.xidian.sselab.array;
+package cn.edu.xidian.sselab.hashtable;
 
 import java.util.HashSet;
 /**
@@ -25,10 +25,10 @@ public class ContainsDuplicate {
 		
 	}
 
-	//这道题判断一个数组中是否存在两个相同的值
-	//为了使时间复杂度比较低，可以达到O(n)的程度，这里可以将取出来的值放到HashSet，Hashtable，ArrayList等中，
-	//因为这些容器内置了contains方法，之用调用他们的接口就可以进行判断是否有相同的存在
-	//对数组进行遍历，将里面的数值放到容器中，然后判断是否相同的值，要注意这里是先判断后存放
+	//锟斤拷锟斤拷锟斤拷卸锟揭伙拷锟斤拷锟斤拷锟斤拷锟斤拷欠锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷同锟斤拷值
+	//为锟斤拷使时锟戒复锟接度比较低ｏ拷锟斤拷锟皆达到O(n)锟侥程度ｏ拷锟斤拷锟斤拷锟斤拷越锟饺★拷锟斤拷锟斤拷锟街碉拷诺锟紿ashSet锟斤拷Hashtable锟斤拷ArrayList锟斤拷锟叫ｏ拷
+	//锟斤拷为锟斤拷些锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷contains锟斤拷锟斤拷锟斤拷之锟矫碉拷锟斤拷锟斤拷锟角的接口就匡拷锟皆斤拷锟斤拷锟叫讹拷锟角凤拷锟斤拷锟斤拷同锟侥达拷锟斤拷
+	//锟斤拷锟斤拷锟斤拷锟斤拷斜锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷值锟脚碉拷锟斤拷锟斤拷锟叫ｏ拷然锟斤拷锟叫讹拷锟角凤拷锟斤拷同锟斤拷值锟斤拷要注锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟叫断猴拷锟斤拷
 	public boolean containsDuplicate(int[] nums){	
 		int len = nums.length;
 		HashSet<Integer> temp = new HashSet<Integer>();

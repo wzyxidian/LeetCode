@@ -1,4 +1,4 @@
-package cn.edu.xidian.sselab.array;
+package cn.edu.xidian.sselab.hashtable;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -19,8 +19,6 @@ import java.util.Map;
  */
 public class TwoSum {
 
-	//最开始的，也是最简单的思路，就是遍历整个数组，时间复杂度O(n^2);
-	//这里自己改进的地方，一个是第一层循环只用遍历到倒数第二个数，第二层循环从第二个数开始遍历；第二个是如果i>j，直接跳过这次比较
 	public int[] twoSum(int[] nums, int target){
 		int length = nums.length;
 		int[] indices = new int[2];
@@ -38,9 +36,7 @@ public class TwoSum {
 		return indices;
 	}
 	
-	//参考比较好的，O(n)的时间复杂度
-	//从开始进行遍历，将遇到的数放入到一个Map中，记录下数值与他的下标，
-	//用目标结果减去遍历的值，如果得到的结果在Map中存在，则说明存在，取出他们的下标返回即可
+
 	public int[] twoSums(int[] nums, int target){
 		int length = nums.length;
 		int[] indices = new int[2];
