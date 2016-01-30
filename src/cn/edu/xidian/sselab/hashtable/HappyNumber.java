@@ -27,7 +27,7 @@ import java.util.Set;
  */
 public class HappyNumber {
 
-	//自己改了三次才改正确的方法,出现了两个错误：（1）忘记如果不能于1，会一直循环的情况给排除掉,这里用一个Set保存出现的值来排除这种情况
+	//自己改了三次才改正确的方法,出现了两个错误：（1）忘记如果不等于1，会一直循环的情况给排除掉,这里用一个Set保存出现的值来排除这种情况
 	//（2）求平方的时候没有用Math.pow(a,b)这种方法
 	public boolean isHappy(int n){
 		if(n < 1) 

@@ -11,7 +11,6 @@ import java.util.Set;
  * 		Given an array of integers and an integer k, 
  * 		find out whether there are two distinct indices i and j in the array such that nums[i] = nums[j] 
  * 		and the difference between i and j is at most k. 
- * ����ط�ע���ǣ��������k�����Ա�kС�����Բ����õ��ڣ�Ҫ��С�ڵ���
  *
  */
 public class ContainsDuplicateII {
@@ -29,7 +28,7 @@ public class ContainsDuplicateII {
 		return false;
 	}
 	
-	//ͨ��Set�������ж�
+	//another idea
 	public boolean containsNearbyDuplicates(int[] nums,int k){
 		int start = 0;
 		int end = 0;

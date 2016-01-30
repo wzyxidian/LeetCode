@@ -10,25 +10,6 @@ import java.util.HashSet;
  */
 public class ContainsDuplicate {
 
-	/**
-	 * @author wzy
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		int[] nums = new int[]{12,2,3,4};
-		ContainsDuplicate cd = new ContainsDuplicate();
-		long t1 = System.currentTimeMillis();
-		cd.containsDuplicate(nums);
-		long t2 = System.currentTimeMillis();
-		System.out.println(t2-t1);
-		
-	}
-
-	//������ж�һ���������Ƿ����������ͬ��ֵ
-	//Ϊ��ʹʱ�临�ӶȱȽϵͣ����ԴﵽO(n)�ĳ̶ȣ�������Խ�ȡ������ֵ�ŵ�HashSet��Hashtable��ArrayList���У�
-	//��Ϊ��Щ����������contains������֮�õ������ǵĽӿھͿ��Խ����ж��Ƿ�����ͬ�Ĵ���
-	//��������б����������ֵ�ŵ������У�Ȼ���ж��Ƿ���ͬ��ֵ��Ҫע�����������жϺ���
 	public boolean containsDuplicate(int[] nums){	
 		int len = nums.length;
 		HashSet<Integer> temp = new HashSet<Integer>();
