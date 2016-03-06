@@ -19,7 +19,7 @@ import java.util.Set;
  */
 public class ValidSudoku {
 
-	//参考了大牛的解法，自己拉下了每个小九方格也要进行比较，最大时间复杂度O(n^4)
+	//参考了大牛的解法，自己落下了每个小九方格也要进行比较，最大时间复杂度O(n^4)
 	public boolean isValidSudoku(char[][] board){
 		//先比较一横行或者一竖列
 		for(int i=0;i<9;i++){

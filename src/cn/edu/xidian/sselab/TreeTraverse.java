@@ -7,12 +7,7 @@ public class TreeTraverse {
 
 	private final static int[] array = new int[]{1,2,3,4,5,6,7,8,9};
 	public static LinkedList<TreeNode> nodeList;
-	/**
-	 * @author wzy
-	 * @param args
-	 * @see Ҫ�Զ��������б������ȵ�һ������Ҫ��������������1������ڵ㣨2�����������ȫ��ת���ɽڵ�
-	 * ��3�������ڵ�֮��ĸ��ӹ�ϵ��4������һ�ַ�ʽ���б���
-	 */
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		TreeTraverse bh = new TreeTraverse();
@@ -32,7 +27,7 @@ public class TreeTraverse {
 		
 	}
 	
-	//����ڵ�
+	
 	private static class TreeNode{
 		int val;
 		TreeNode leftChild;
@@ -44,28 +39,27 @@ public class TreeTraverse {
 		}
 	}
 	
-	//��������
+	
 	public void createBinTree(){
 		nodeList = new LinkedList<TreeNode>();
 		int arrayLen = array.length;
-		//��һ�������ֵһ��ת��ΪTreeNode�ڵ�
+		
 		for(int i=0;i<arrayLen;i++){
 			nodeList.add(new TreeNode(array[i]));
 		}		
-		int MaxFatherIndex = arrayLen / 2 - 1;//���ڵ�ĸ����Ǽ�ס�ڵ��±��Ǵ�0��ʼ��ǵ�
-		//�����һ�����ڵ�֮ǰ�����еĸ��ڵ㰴�ո��ڵ��뺢�ӽڵ�֮������ֹ�ϵ����������
+		int MaxFatherIndex = arrayLen / 2 - 1;
 		for(int parentIndex = 0;parentIndex < MaxFatherIndex; parentIndex++){
 			nodeList.get(parentIndex).leftChild = nodeList.get(parentIndex * 2 + 1);
 			nodeList.get(parentIndex).rightChild = nodeList.get(parentIndex * 2 + 2);
 		}
-		//�����һ�����ڵ㵥������
+		
 		nodeList.get(MaxFatherIndex).leftChild = nodeList.get(MaxFatherIndex * 2 + 1);
 		if(arrayLen % 2 == 1){
 			nodeList.get(MaxFatherIndex).rightChild = nodeList.get(MaxFatherIndex * 2 + 2);		
 		}			
 	}
 
-	//�������
+	
 	public static void preOrderTraverse(TreeNode node){
 		if(node == null){
 			return ;
@@ -75,7 +69,7 @@ public class TreeTraverse {
 		preOrderTraverse(node.rightChild);
 	}
 	
-	//�������
+	
 	public static void inOrderTraverse(TreeNode node){
 		if(node == null){
 			return ;
@@ -85,7 +79,7 @@ public class TreeTraverse {
 		inOrderTraverse(node.rightChild);
 	}
 	
-	//�������
+
 	public static void postOrderTraverse(TreeNode node){
 		if(node == null){
 			return ;
@@ -95,8 +89,7 @@ public class TreeTraverse {
 		System.out.println(node.val + " ");
 	}
 	
-	//�ǵݹ��������
-	//��ջ��˼�룬�������·��ʵĽڵ�
+	
 	public static void preOrderTraverse2(TreeNode node){
 		Stack<TreeNode> stack = new Stack<TreeNode>();
 		while(node != null || !stack.empty()){
@@ -112,7 +105,7 @@ public class TreeTraverse {
 		}
 	}
 	
-	//�ǵݹ��������
+	
 	public static void inOrderTraverse2(TreeNode node){
 		Stack<TreeNode> stack = new Stack<TreeNode>();
 		while(node != null || !stack.empty()){
@@ -128,8 +121,6 @@ public class TreeTraverse {
 		}
 	}
 	
-	//�ǵݹ�ʵ�ֺ������,
-	//������������ջ��һ��������ǣ�һ��������ڵ�
 	public static void postOrderTraverse2(TreeNode node){
 		Stack<TreeNode> stack = new Stack<TreeNode>();
 		Stack<Integer> stack1 = new Stack<Integer>();
