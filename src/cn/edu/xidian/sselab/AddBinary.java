@@ -17,7 +17,7 @@ public class AddBinary {
 		// TODO Auto-generated method stub
 		System.out.println(AddBinary.addBinary("11111000", "10010001"));
 	}
-	
+
 	//自己做的，一次提交成功，第一次上来一次提交成功
 	//这个题的思路主要是针对AddTwoNumbers受到的启发，然后用了一个while循环解决了问题，用StringBuffer来进行逆向存储，
 	//最后调用他的reverse方法，反向得到结果
